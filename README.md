@@ -142,8 +142,9 @@ trade. The confirmation target will typically be a number between 0 and 6, with
 0 being the fastest and 6 being the safest but slowest.
 
 The estimated total time for a trade can be calculated as:
-  ((num_rounds+1)/2 * num_confirmations * coin1_avg_confirm_time) +
-  ((num_rounds+1)/2 * num_confirmations * coin2_avg_confirm_time)
+
+ ((num_rounds+1)/2 * num_confirmations * coin1_avg_confirm_time) +
+ ((num_rounds+1)/2 * num_confirmations * coin2_avg_confirm_time)
 
 Where coin1 and coin2 represent the two cryptocurrencies being traded.
 
