@@ -309,6 +309,49 @@ Usage
   walkthough I will gladly link to it here.
 
 
+Publishing Trades
+=================
+
+Public trade data is vital for price discovery in a market.  If all trades are
+private, this information would not be available.  PeerTrade tackles this by
+giving both parties the option to publish completed trades.
+
+Once a trade has been completed, PeerTrade will ask if you wish to publish it.
+If you choose yes, the trade token will be published to peertrade.org. The
+published information consists of the trade amounts, receive addresses, number
+of rounds, and number of confirmations.
+
+You may choose not to publish the trade, however be aware that either party
+may do so.  Thus if you really do not wish a trade published, you should agree
+to that with the other party in advance.
+
+Trades are published to peertrade.org.  The peertrade.org website automatically
+creates markets for new symbols and new trading pairs when they are published.
+
+More information is available at peertrade.org.
+
+
+Author Tips
+===========
+
+PeerTrade software automatically calculates an optional donation tip for the
+software author. The tip applies only to the coins you are sending in the
+exchange, eg if you are sending LTC and receiving DOGE then the tip would be in
+LTC.
+
+Tipping is completely optional and the tip is only sent after a trade completes
+successfully. The tip amount is displayed before each trade begins. The amount
+may be changed or set to 0 before starting the trade. The default tip amount is
+1/2 of 1 percent.
+
+These tips will encourage further development of the software and of
+peertrade.org.
+
+Note also that the tip option will only be present if the author has taken the
+time to download and install your altcoin and include it in the PeerTrade
+coin_defaults.json file.
+
+
 Wallet Backups - Important!!!
 =============================
 
