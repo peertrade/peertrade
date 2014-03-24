@@ -462,7 +462,7 @@ If any of those things fit your skillset and interest, go for it!
 
 TODOS
 =====
- 
+``` 
  [ ] Add mechanism for adding (suggesting?) new coins to PeerTrade.org website
      including coin name, default connection settings, min send amount, etc.
  [ ] Implement a reputation system based on number of successfully completed 
@@ -472,7 +472,7 @@ TODOS
  [X] Run strict. Code should throw exception on any E_NOTICE, E_WARNING, etc.
  [ ] Add mechanism/protocol for placing offers (limit orders) and receiving
      notifications of matches.  In theory this could facilitate trading.
-
+```
 
 Open Issues
 ===========
