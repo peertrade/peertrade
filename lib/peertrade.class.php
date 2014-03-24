@@ -542,15 +542,6 @@ class peertrade {
             
         } while( 1 );
 
-        // Enable this to test publishing the trade without actually performing a trade.
-        $test_publish = false;
-        if( $test_publish ) {
-            $this->config->start_time = time();
-            $this->config->end_time = time();
-            $this->publish_trade();
-            return;
-        }        
-        
         $this->config->start_time = time();
         $this->save_trade_history( self::trade_status_incomplete );
         echo sprintf( "\n--- Beginning trade %s ---\n\n", $this->get_trade_title() );
