@@ -16,7 +16,7 @@ What is PeerTrade for?
 ======================
 
 PeerTrade facilitates the exchange of cryptocurrencies directly between two
-parties without any third party involvment. This means: no centralized exchange
+parties without any third party involvement. This means: no centralized exchange
 and no escrow agent.
 
 The problem we face when two parties wish to exchange digital coins of one
