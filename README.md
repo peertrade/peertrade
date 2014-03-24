@@ -377,7 +377,8 @@ The PeerTrade software uses the following configuration files:
     
 **userdir/coin_defaults.json**
 
-    Contains the same data as coin_defaul
+    Contains the same type of data as coin_defaults.json but is located in the
+    user's peertrade data directory.
 
     This file will be auto refreshed from peertrade.org periodically and
     should not be manually edited.
