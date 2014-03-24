@@ -1,0 +1,93 @@
+
+-- This document contains Use Cases for testing peertrade manually --
+
+Terminology:
+
+X := User 1.  party to the trade.
+Y := User 2.  party to the trade.
+z := User 3.  a 3rd party, not part of the trade.
+
+Coin1 := Coin 1
+Coin2 := Coin 2
+
+
+Case: X and Y each initiate a new trade and trade to completion.
+
+    Expected: trade completes. Both users are able to publish trade.
+    Actual:   trade completes. Both users are able to publish trade.
+
+Case: X and Y each initiate a new trade and trade to completion with 1 confirm.
+
+    Expected: trade completes.
+    Actual:   trade completes.
+
+Case: X and Y initiate new trades, X interrupts trade and resumes via Incomplete list.
+
+    Expected: trade completes.
+    Actual:   trade completes.
+
+Case: X and Y initiate new trades, X and Y both interrupt trade and later resume via Incomplete list.
+
+    Expected: trade completes.
+    Actual:   trade completes.
+
+Case: X begins a trade, sends token to Y, then inputs X's token instead of Y's token.
+
+    Expected: X receives helpful error message.  Trade does not begin.
+    Actual:   X receives helpful error message.  Trade does not begin.
+
+Case: X and Y begin trade.  X stops wallet of Coin1 or Coin2 during trade.
+
+    Expected: X receives helpful error message.  X can successfully resume incompleted trade.
+    Actual:   X receives technical error message.  X can successfully resume incompleted trade.
+    
+message received:
+
+        ********** Error **********
+        A wallet communication error occurred.
+         --> Unable to communicate with http://starcoinrpc:W5ZQdZfGF7AkEPASc6krM6pHtpnvpwxzm2gpW2@127.0.0.1:18217 while calling method listtransactions
+        ***************************
+
+Case: X begins a trade, sends token to Y, then inputs a token from Z
+
+    Expected: X receives helpful error message.  Trade does not begin.
+
+Case: X begins a trade via token, then inputs a token from X, Y, or Z corresponding to a completed trade.
+
+    Expected: X receives helpful error message.  Trade does not begin.
+    Actual: X receives helpful error message.  Trade does not begin.
+
+Case: X begins a trade via token, then inputs a token from Y corresponding to an incomplete trade.
+
+    Expected: X receives helpful error message.  Trade does not begin.
+    Actual: X receives helpful error message.  Trade does not begin.
+
+Case: X begins a trade via token, then inputs a token from Y with different amounts than X specified.
+
+    Expected: X receives helpful error message.  Trade does not begin.
+    Actual: X receives helpful error message.  Trade does not begin.
+
+Case: X runs PeerTrade on Windows and performs a trade.
+
+    Expected: peertrade runs normally, trade completes.
+    Expected: peertrade runs normally, did not test performing a trade yet.
+
+Case: X runs PeerTrade on Mac and performs a trade.
+
+    Expected: peertrade runs normally, trade completes.
+
+Case: X tries to initiate trade but COIN1 wallet is not running.
+
+    Expected: X receives helpful connect error message and option to Try again, Abort, or Modify connection settings.
+    Actual:   X receives helpful connect error message and option to Try again, Abort, or Modify connection settings.
+
+Case: X tries to initiate trade but COIN1 wallet is not synced with blockchain
+
+    Expected: X receives helpful unsynced chain message and option to Try again or Abort.
+    Actual:   X receives helpful unsynced chain message and option to Try again or Abort.
+
+Case: X tries to initiate trade but COIN1 wallet is not connected to any peers.
+
+    Expected: X receives helpful unsynced chain message and option to Try again or Abort.
+    Actual:   X receives helpful unsynced chain message and option to Try again or Abort.
+
