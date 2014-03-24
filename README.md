@@ -480,7 +480,7 @@ Bug Reports, Patches and Proposals are welcome.
 Contact Author
 ==============
 
-   peertrade -- @t -- live  -- d0t -- com
+   peertrade -- @t -- myway  -- d0t -- com
 
    If you don't receive a prompt response, try github or the website.
 
