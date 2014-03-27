@@ -1810,13 +1810,6 @@ END;
                 // transaction fees.
                 //
                 // In the other case when there is no deficit then we send send_per_round, putting us in the lead. ( as far as we know )
-                //
-                // Note that in the deficit > 0 case we could jump ahead to the lead immediately with this send, and that would be most efficient.
-                // The reason we do not is that the user expects to see send_per_round amount sent each time, and in the very common
-                // case of deficit == 1, it would be confusing to see send_per_round * 2 instead.
-                // I know because I had it that way and it confused me, the guy that wrote it.  Still that is a possible
-                // area of optimization.
-                // $send_amount = $round_deficit ? $round_deficit * $send_per_round : $send_per_round;
                 
 
                 // This will put us in the lead. so we continually play leapfrog with the other party.
